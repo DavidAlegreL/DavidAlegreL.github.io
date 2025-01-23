@@ -1,0 +1,82 @@
+/* Cargar la fuente personalizada */
+@font-face {
+    font-family: 'Roc Grotesk Wide Medium';
+    src: url('../font/roc-grotesk-wide-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos generales de la página */
+body {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    background-color: #EC5033;  /* Ejemplo de color de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    font-weight: normal;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    font-size: 10px;
+}
+
+/* Estilo para enlaces */
+a {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilo para los botones */
+button {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    font-size: 16px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para las listas */
+ul, ol {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo para las citas */
+blockquote {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    font-family: 'Roc Grotesk Wide Medium', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+/* Agregar un estilo más grande para títulos en el contenido */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
