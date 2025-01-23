@@ -12,9 +12,29 @@ body {
     background-color: #EC5033;
     margin: 0;
     padding: 0;
-
+    max-width: 100%;
 }
+.container {
+    width: 80%; /* Ancho general */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduce el ancho */
+        padding: 10px;
+    }
 
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+        text-align: center; /* Centra encabezados */
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+}
 hr {
     height: 1px;
     /* Altura de la línea */
@@ -74,6 +94,11 @@ nav {
 .proyecto {
     height: 50%;
     height: 80px;
+}
+img, iframe, video {
+    max-width: 100%; /* Se ajusta al contenedor */
+    height: auto;
+    display: block; /* Evita desplazamientos extraños */
 }
 
 @keyframes aparicion {
