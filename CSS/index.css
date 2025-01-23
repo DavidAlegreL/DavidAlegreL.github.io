@@ -64,13 +64,10 @@ nav {
 .foto {
     position: relative;
     left: 30vw;
-
     width: 280px;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.221);
     opacity: 0.6;
-
-    /* Filtro para que coincida con el color de fondo */
     filter: sepia(1) saturate(1) hue-rotate(-15deg) brightness(1);
 }
 
@@ -162,17 +159,171 @@ nav {
     transform: translateX(-50%) translateY(-10px); /* Da el efecto de elevación */
 }
 
-.foto>img {
+.foto > img {
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    height: auto; /* Mantiene las proporciones originales */
+}
 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+
+.stack i.custom-c::before {
+    content: "C"; /* Letras de C */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.stack i.custom-csharp::before {
+    content: "C#"; /* Letras de C# */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.stack i, .stack p {
+    display: inline-block;
+    margin: 10px 15px; /* Espaciado entre íconos */
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+}
+.stack i .tool-name {
+    display: none; /* Ocultar el nombre por defecto */
+    position: absolute;
+    top: 100%; /* Posicionar el nombre justo debajo del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.stack i:hover .tool-name {
+    display: block; /* Mostrar el nombre cuando el ratón pase por encima */
+    opacity: 1; /* Hacerlo visible */
+}
+
+.stack > * {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.stack i, .stack p {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; /* Alineación centrada de los iconos */
+    margin: 10px 15px;
+    font-size: 2rem;
+    color: #ffffff;
+    width: 50px; /* Tamaño uniforme */
+    height: 50px; /* Tamaño uniforme */
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    line-height: 50px; /* Asegura que el texto esté centrado verticalmente */
+}
+
+.stack i.custom-c::before, .stack i.custom-csharp::before {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.stack i.custom-c::before {
+    content: "C"; /* Letras de C */
+}
+
+.stack i.custom-csharp::before {
+    content: "C#"; /* Letras de C# */
+}
+
+.stack i:hover {
+    color: #EC5033;
+    transform: scale(1.2);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.stack p {
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
 .stacks {
     display: flex;
-
-    flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+}
+
+.contacto {
+    text-align: center;
+    padding: 50px;
+    background-color: #EC5033; /* Mismo color que el fondo actual */
+    color: #fff;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto-lista li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.contacto-lista a {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.contacto-lista a:hover {
+    transform: scale(1.1);
+}
+
+.contacto-lista .icono {
+    width: 50px; /* Tamaño del icono */
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contacto-lista .icono:hover {
+    filter: brightness(1.2); /* Más brillo al pasar el mouse */
+}
+#sobre-mi {
+    text-align: center;
+    background-color: #ff6347;
+    padding: 20px;
+    color: black;
+}
+
+#sobre-mi .btn-descargar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#sobre-mi .btn-descargar:hover {
+    background-color: #555;
+}
+#sobre-mi p{
+    font-size: 1rem;
+}
+
+header p {
+    font-size: 1rem; /* Tamaño ligeramente mayor */
+    font-weight: normal; /* Normaliza el peso del texto si no lo quieres en negrita */
 }

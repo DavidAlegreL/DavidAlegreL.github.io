@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/pallette.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,14 +29,12 @@
                 <img src="./img/portfolioYO.png" alt="fotoDavid">
             </div>
         </div>
-        <div class="about espaciadoAbajo">
+        <section id="sobre-mi">
             <h2>Sobre mí</h2>
-            Soy un apasionado de la tecnología y la programación, con experiencia en desarrollo backend y frontend
-            utilizando lenguajes como Java, Python y herramientas como Angular y Docker. He trabajado en proyectos
-            académicos, como sistemas distribuidos y la aplicación TravelAir. Mi objetivo es seguir creciendo
-            profesionalmente, contribuyendo con soluciones innovadoras y eficientes en el ámbito del desarrollo de
-            software.
-        </div>
+            <p>Soy un apasionado de la tecnología y la programación, con experiencia en desarrollo backend y frontend utilizando herramientas como Java, Python, Angular y Docker. He trabajado en proyectos destacados, como sistemas distribuidos y TravelAir. Mi objetivo es seguir creciendo profesionalmente, contribuyendo con soluciones innovadoras y eficientes en el ámbito del desarrollo de software.</p>
+            <p>Aquí está mi CV:</p>
+            <a href="assets/CV.pdf" download="Mi_CV.pdf" class="btn-descargar">Descargar CV</a>
+        </section>
         <div class="proyectos espaciadoAbajo">
             <h2>Proyectos</h2>
             <br>
@@ -92,35 +91,48 @@
         <div class="stacks espaciadoAbajo">
             <div class="stack" id="lenguajes">
                 <h4>Lenguajes</h4>
-                <p>Python</p>
-                <p>Java</p>
-                <p>SQL</p>
-                <p>C</p>
-                <p>C#</p>
+                <i class="fab fa-python"><span class="tool-name">Python</span></i>
+                <i class="fab fa-java"><span class="tool-name">Java</span></i>
+                <i class="fas fa-database"><span class="tool-name">Base de datos</span></i>
+                <i class="custom-c"><span class="tool-name">C</span></i>
+                <i class="custom-csharp"><span class="tool-name">C#</span></i>
             </div>
             <div class="stack" id="desarrolloWeb">
                 <h4>Desarrollo Web</h4>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Flask</p>
-                <p>React</p>
-                <p>Node</p>
-                <p>Angular</p>
+                <i class="fab fa-html5"><span class="tool-name">HTML5</span></i>
+                <i class="fab fa-css3-alt"><span class="tool-name">CSS3</span></i>
+                <i class="fab fa-react"><span class="tool-name">React</span></i>
+                <i class="fab fa-node"><span class="tool-name">Node.js</span></i>
+                <i class="fab fa-angular"><span class="tool-name">Angular</span></i>
             </div>
             <div class="stack" id="herramientas">
                 <h4>Herramientas</h4>
-                <p>Docker</p>
+                <i class="fab fa-docker"><span class="tool-name">Docker</span></i>
             </div>
         </div>
-        <div class="contacto espaciadoAbajo">
-            <h2>Contacto</h3>
-                <p><a href="">Email</a>, <a href="">Linkedin</a></p>
-        </div>
-
+        
     </main>
     <footer>
-        <hr>
-        <a href=".cabecera">Volver a arriba</a>
+        <div class="contacto espaciadoAbajo">
+            <h2>Contacto</h3>
+            <ul class="contacto-lista">
+                <li>
+                    <a href="mailto:davidalegre002@gmail.com" target="_blank" id="email">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" class="icono">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/david-alegre-29ba782b3/" target="_blank" id="linkedin">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="icono">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/DavidAlegreL" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="icono">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
     <script type="module" src="./raton.js"></script>
 </body>
