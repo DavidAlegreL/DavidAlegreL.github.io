@@ -204,11 +204,15 @@ nav {
 }
 
 .stack > * {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra verticalmente dentro del stack */
     text-align: center;
+}
+h2.stacks-title {
+    text-align: center; /* Centra horizontalmente el texto */
+    margin: 20px 0; /* Opcional: Espaciado superior e inferior */
 }
 
 .stack i, .stack p {
@@ -252,9 +256,11 @@ nav {
 
 .stacks {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Centra el contenido horizontalmente */
     align-items: flex-start;
     flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+    gap: 50px; /* Espaciado entre los stacks */
+    text-align: center; /* Centra el contenido interno de cada stack */
 }
 
 .contacto {
