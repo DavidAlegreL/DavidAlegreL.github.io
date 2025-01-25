@@ -347,5 +347,5 @@ h2, h4, p{
 
 header p {
     font-size: 1rem; /* Tamaño ligeramente mayor */
-    font-weight: normal; /* Normaliza el peso del texto si no lo quieres en negrita */
+    font-weight: normal; 
 }
