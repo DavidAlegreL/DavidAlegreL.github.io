@@ -37,20 +37,14 @@ nav {
 }
 
 .textoYfoto {
-    position: relative;
-    /* Permite que los elementos hijos se posicionen de forma absoluta dentro de este contenedor */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: auto;
     margin-top: 100px;
-
+    position: relative; /* Asegura que los elementos internos se alineen correctamente */
 }
-
 .texto {
-    position: absolute;
-    /* Se posiciona sobre la imagen */
     z-index: 10;
     /* Asegura que el texto esté por encima de la imagen */
     color: white;
@@ -116,19 +110,18 @@ h2, h4, p{
 }
 @media (max-width: 768px) {
     .textoYfoto {
-        flex-direction: column; /* Cambia la dirección del layout a columna */
-        align-items: center;    /* Alinea los elementos al centro */
+        flex-direction: column;
+        align-items: center;
     }
 
     .texto {
-        margin-bottom: 20px; /* Añade espacio entre el texto y la foto */
+        margin-bottom: 20px;
     }
 
     .foto {
-        margin-top: 20px; /* Añade espacio entre la foto y el texto */
+        margin-top: 20px;
     }
 }
-
 @keyframes aparicion {
     0% {
         top: 0;
