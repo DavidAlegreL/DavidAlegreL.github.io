@@ -3,53 +3,22 @@ html {
     margin-right: 50px;
 
 }
-.titulo {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1.5rem; /* Ajusta según el diseño */
-}
+
 .espaciadoAbajo {
     margin-bottom: 150px;
 }
-html, body {
+
+body {
     background-color: #EC5033;
-    color: #000; /* Color del texto */
-    height: 100%;
     margin: 0;
     padding: 0;
-}
 
-.container {
-    width: 80%; /* Ancho general */
-    margin: 0 auto; /* Centrado horizontal */
-    padding: 20px;
-}
-/* Ajustes generales para dispositivos móviles */
-@media (max-width: 768px) {
-    body {
-        padding: 0 10px; /* Ajusta los márgenes y paddings */
-        background-color: #EC5033;
-    }
-
-    h1, h2, h3, p {
-        font-size: 14px; /* Reduce el tamaño de las letras */
-    }
-
-    .proyectos, .contacto {
-        display: flex;
-        flex-direction: column; /* Coloca los elementos uno debajo del otro */
-        align-items: center;
-    }
-}
-/* Si hay otros elementos con fondo blanco */
-* {
-    background-color: transparent;
 }
 
 hr {
     height: 1px;
     /* Altura de la línea */
-    background-color: black;
+    background-color: white;
     /* Color de la línea */
     border: none;
     /* Elimina el borde predeterminado */
@@ -61,7 +30,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     /* Línea solo en la parte inferior */
     padding-right: 10px;
     padding-left: 10px;
@@ -98,18 +67,52 @@ nav {
     width: 280px;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.221);
-    opacity: 0.6;
-    filter: sepia(1) saturate(1) hue-rotate(-15deg) brightness(1);
+
+}
+h2, h4, p{
+    color: white;
+    text-align: center;
+}
+.proyectos {
+    text-align: center;
+}
+.proyectos h2{
+    color: white;
 }
 
 .proyecto {
-    height: 50%;
-    height: 80px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ff6347;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
-img, iframe, video {
-    max-width: 100%; /* Se ajusta al contenedor */
-    height: auto;
-    display: block; /* Evita desplazamientos extraños */
+
+.proyecto:hover {
+    background-color: #e04b2f;
+    transform: scale(1.02);
+}
+
+.proyecto p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.proyecto .contenido {
+    margin-top: 10px;
+}
+
+.proyecto a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.proyecto a:hover {
+    color: #ffddcc;
 }
 
 @keyframes aparicion {
@@ -152,41 +155,11 @@ img, iframe, video {
     height: 80px;
     /* Agregamos un valor inicial de visibilidad y opacity para prevenir parpadeos */
     visibility: visible;
+    color: white;
     opacity: 1;
 }
 
-.proyecto {
-    height: 80px; /* Ajusta según sea necesario */
-}
 
-.proyecto:hover .contenido {
-    animation: aparicion 0.4s ease forwards;
-}
-
-.proyectos:last-child{
-    padding: 1000px;
-}
-
-.proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajustable según diseño */
-    gap: 20px;
-}
-.proyecto {
-    position: relative; /* Necesario para la imagen posicionada */
-    margin-bottom: 20px;
-}
-.proyecto-item {
-    text-align: center;
-    background: #FFF;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.proyecto:hover {
-    color: #f0f0f0; /* Cambia el fondo al pasar el cursor */
-}
 
 .imagenProyecto {
     pointer-events: none;
@@ -251,15 +224,11 @@ img, iframe, video {
 }
 
 .stack > * {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra verticalmente dentro del stack */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-}
-h2.stacks-title {
-    text-align: center; /* Centra horizontalmente el texto */
-    margin: 20px 0; /* Opcional: Espaciado superior e inferior */
 }
 
 .stack i, .stack p {
@@ -295,7 +264,9 @@ h2.stacks-title {
     transform: scale(1.2);
     transition: transform 0.2s ease, color 0.2s ease;
 }
-
+.proyectos h{
+    color: white;
+}
 .stack p {
     font-size: 1.2rem;
     color: #ffffff;
@@ -303,25 +274,16 @@ h2.stacks-title {
 
 .stacks {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
-    gap: 50px; /* Espaciado entre los stacks */
-    text-align: center; /* Centra el contenido interno de cada stack */
 }
 
 .contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.contacto input, .contacto textarea, .contacto button {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 5px;
+    text-align: center;
+    padding: 50px;
+    background-color: #EC5033; /* Mismo color que el fondo actual */
+    color: #fff;
 }
 
 .contacto h2 {
@@ -361,7 +323,7 @@ h2.stacks-title {
     text-align: center;
     background-color: #ff6347;
     padding: 20px;
-    color: black;
+    color: white;
 }
 
 #sobre-mi .btn-descargar {
