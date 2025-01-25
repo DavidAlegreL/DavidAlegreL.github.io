@@ -3,7 +3,11 @@ html {
     margin-right: 50px;
 
 }
-
+.titulo {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem; /* Ajusta según el diseño */
+}
 .espaciadoAbajo {
     margin-bottom: 150px;
 }
@@ -21,88 +25,21 @@ body {
 }
 /* Ajustes generales para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Ajustar el header */
-    header.cabecera nav {
-        flex-direction: column; /* Cambiar a columnas */
-        align-items: center; /* Centrar los elementos */
-    }
-    header.cabecera nav p {
-        margin: 10px 0;
-        text-align: center;
+    body {
+        padding: 0 10px; /* Ajusta los márgenes y paddings */
     }
 
-    /* Texto "Ingeniero en Tecnologías de la Información" */
-    .textoYfoto {
-        flex-direction: column; /* Poner en columna */
-        text-align: center;
-        position: relative;
-    }
-    .texto {
-        position: relative; /* Evitar superposición */
-        z-index: 2; /* Asegurar que esté sobre la imagen */
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste */
-        padding: 10px;
-        border-radius: 8px;
-    }
-    .foto {
-        width: 80%; /* Ajustar tamaño de la imagen */
-        max-width: 300px;
-        margin: 0 auto 20px auto;
+    h1, h2, h3, p {
+        font-size: 14px; /* Reduce el tamaño de las letras */
     }
 
-    /* Ajustar los proyectos */
-    .proyecto {
+    .proyectos, .contacto {
         display: flex;
-        flex-direction: column; /* Poner en columna */
-        align-items: center; /* Centrar contenido */
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .proyecto h2, .proyecto p {
-        margin: 10px 0;
-    }
-    .imagenProyecto {
-        width: 90%;
-        max-width: 300px; /* Limitar ancho máximo */
-        margin-bottom: 10px;
-    }
-
-    /* Ajustar el fondo para todas las secciones */
-    .sobre-mi, .contacto, .proyectos {
-        background-color: #f48c06; /* Restaurar el fondo naranja */
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    /* Centrar las letras de contacto */
-    .contacto ul.contacto-lista {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Centrar los íconos */
-        padding: 0;
-        margin: 0;
-    }
-    .contacto ul.contacto-lista li {
-        margin: 10px;
-        list-style: none;
-        text-align: center; /* Centrar texto debajo de los íconos */
-    }
-
-    /* Ajustar stacks */
-    .stacks {
-        flex-wrap: wrap; /* Permitir que los elementos se ajusten */
-        justify-content: center;
-    }
-    .stack {
-        width: 100%; /* Apilar los stacks en pantallas pequeñas */
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .stack i {
-        font-size: 1.5rem;
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        align-items: center;
     }
 }
+
 
 hr {
     height: 1px;
@@ -225,10 +162,21 @@ img, iframe, video {
     padding: 1000px;
 }
 
-
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajustable según diseño */
+    gap: 20px;
+}
 .proyecto {
     position: relative; /* Necesario para la imagen posicionada */
     margin-bottom: 20px;
+}
+.proyecto-item {
+    text-align: center;
+    background: #FFF;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .proyecto:hover {
@@ -358,10 +306,17 @@ h2.stacks-title {
 }
 
 .contacto {
-    text-align: center;
-    padding: 50px;
-    background-color: #EC5033; /* Mismo color que el fondo actual */
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contacto input, .contacto textarea, .contacto button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .contacto h2 {
