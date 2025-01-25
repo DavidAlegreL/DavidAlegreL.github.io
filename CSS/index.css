@@ -27,6 +27,7 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 0 10px; /* Ajusta los márgenes y paddings */
+        background-color: #EC5033;
     }
 
     h1, h2, h3, p {
