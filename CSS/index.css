@@ -21,49 +21,72 @@ body {
 }
 /* Ajustes generales para dispositivos móviles */
 @media (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 10px;
-    }
-
     /* Ajustar el header */
     header.cabecera nav {
         flex-direction: column; /* Cambiar a columnas */
         align-items: center; /* Centrar los elementos */
     }
     header.cabecera nav p {
-        margin: 10px 0; /* Añadir espacio entre elementos */
+        margin: 10px 0;
         text-align: center;
     }
 
-    /* Ajustar la sección texto y foto */
+    /* Texto "Ingeniero en Tecnologías de la Información" */
     .textoYfoto {
         flex-direction: column; /* Poner en columna */
         text-align: center;
+        position: relative;
     }
     .texto {
-        position: static; /* Dejar el texto en su lugar */
-        margin-bottom: 20px;
+        position: relative; /* Evitar superposición */
+        z-index: 2; /* Asegurar que esté sobre la imagen */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste */
+        padding: 10px;
+        border-radius: 8px;
     }
     .foto {
-        position: static; /* Dejar la imagen en su lugar */
-        left: 0;
-        margin-bottom: 20px;
-        width: 80%; /* Ajustar tamaño en móvil */
-        max-width: 300px; /* Limitar el ancho máximo */
+        width: 80%; /* Ajustar tamaño de la imagen */
+        max-width: 300px;
+        margin: 0 auto 20px auto;
     }
 
-    /* Ajustar proyectos */
+    /* Ajustar los proyectos */
     .proyecto {
-        height: auto; /* Permitir que crezca según el contenido */
-        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column; /* Poner en columna */
+        align-items: center; /* Centrar contenido */
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .proyecto h2, .proyecto p {
+        margin: 10px 0;
+    }
+    .imagenProyecto {
+        width: 90%;
+        max-width: 300px; /* Limitar ancho máximo */
+        margin-bottom: 10px;
     }
 
-    .imagenProyecto {
-        width: 100%; /* Ajustar ancho de imagen */
-        max-width: 300px; /* Limitar ancho máximo */
-        position: static; /* Imagen dentro del flujo */
-        margin-bottom: 10px;
+    /* Ajustar el fondo para todas las secciones */
+    .sobre-mi, .contacto, .proyectos {
+        background-color: #f48c06; /* Restaurar el fondo naranja */
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Centrar las letras de contacto */
+    .contacto ul.contacto-lista {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centrar los íconos */
+        padding: 0;
+        margin: 0;
+    }
+    .contacto ul.contacto-lista li {
+        margin: 10px;
+        list-style: none;
+        text-align: center; /* Centrar texto debajo de los íconos */
     }
 
     /* Ajustar stacks */
@@ -74,22 +97,10 @@ body {
     .stack {
         width: 100%; /* Apilar los stacks en pantallas pequeñas */
         margin-bottom: 20px;
-        text-align: center; /* Centrar los íconos y texto */
+        text-align: center;
     }
     .stack i {
-        font-size: 1.5rem; /* Reducir tamaño de los íconos */
-    }
-
-    /* Ajustar contacto */
-    .contacto ul.contacto-lista {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Centrar los íconos */
-        padding: 0;
-        margin: 0;
-    }
-    .contacto ul.contacto-lista li {
-        margin: 10px; /* Añadir espacio entre íconos */
+        font-size: 1.5rem;
     }
 }
 
