@@ -114,6 +114,20 @@ h2, h4, p{
 .proyecto a:hover {
     color: #ffddcc;
 }
+@media (max-width: 768px) {
+    .textoYfoto {
+        flex-direction: column; /* Cambia la dirección del layout a columna */
+        align-items: center;    /* Alinea los elementos al centro */
+    }
+
+    .texto {
+        margin-bottom: 20px; /* Añade espacio entre el texto y la foto */
+    }
+
+    .foto {
+        margin-top: 20px; /* Añade espacio entre la foto y el texto */
+    }
+}
 
 @keyframes aparicion {
     0% {
