@@ -45,14 +45,14 @@ nav {
     position: relative; /* Asegura que los elementos internos se alineen correctamente */
 }
 .texto {
+    position: absolute;
     z-index: 10;
-    /* Asegura que el texto esté por encima de la imagen */
     color: white;
-    /* Fondo semitransparente para destacar el texto */
     padding: 20px;
     border-radius: 10px;
     left: 5vw;
-
+    top: 20px;  /* Agrega espacio desde la parte superior */
+    max-width: 40%;  /* Limita el ancho del texto para evitar que se sobreponga a la imagen */
 }
 
 .foto {
