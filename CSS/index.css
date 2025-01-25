@@ -19,22 +19,80 @@ body {
     margin: 0 auto; /* Centrado horizontal */
     padding: 20px;
 }
+/* Ajustes generales para dispositivos móviles */
 @media (max-width: 768px) {
-    .container {
-        width: 90%; /* Reduce el ancho */
+    body {
+        margin: 0;
         padding: 10px;
     }
 
-    h1, h2, h3 {
-        font-size: 1.5rem; /* Ajusta el tamaño del texto */
-        text-align: center; /* Centra encabezados */
+    /* Ajustar el header */
+    header.cabecera nav {
+        flex-direction: column; /* Cambiar a columnas */
+        align-items: center; /* Centrar los elementos */
+    }
+    header.cabecera nav p {
+        margin: 10px 0; /* Añadir espacio entre elementos */
+        text-align: center;
     }
 
-    p {
-        font-size: 1rem;
-        line-height: 1.5; /* Mejora la legibilidad */
+    /* Ajustar la sección texto y foto */
+    .textoYfoto {
+        flex-direction: column; /* Poner en columna */
+        text-align: center;
+    }
+    .texto {
+        position: static; /* Dejar el texto en su lugar */
+        margin-bottom: 20px;
+    }
+    .foto {
+        position: static; /* Dejar la imagen en su lugar */
+        left: 0;
+        margin-bottom: 20px;
+        width: 80%; /* Ajustar tamaño en móvil */
+        max-width: 300px; /* Limitar el ancho máximo */
+    }
+
+    /* Ajustar proyectos */
+    .proyecto {
+        height: auto; /* Permitir que crezca según el contenido */
+        margin-bottom: 30px;
+    }
+
+    .imagenProyecto {
+        width: 100%; /* Ajustar ancho de imagen */
+        max-width: 300px; /* Limitar ancho máximo */
+        position: static; /* Imagen dentro del flujo */
+        margin-bottom: 10px;
+    }
+
+    /* Ajustar stacks */
+    .stacks {
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+        justify-content: center;
+    }
+    .stack {
+        width: 100%; /* Apilar los stacks en pantallas pequeñas */
+        margin-bottom: 20px;
+        text-align: center; /* Centrar los íconos y texto */
+    }
+    .stack i {
+        font-size: 1.5rem; /* Reducir tamaño de los íconos */
+    }
+
+    /* Ajustar contacto */
+    .contacto ul.contacto-lista {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centrar los íconos */
+        padding: 0;
+        margin: 0;
+    }
+    .contacto ul.contacto-lista li {
+        margin: 10px; /* Añadir espacio entre íconos */
     }
 }
+
 hr {
     height: 1px;
     /* Altura de la línea */
